@@ -44,5 +44,8 @@ group :development, :test do
 
   # Savon SOAP client
   gem 'savon'
+
+  # Solve http://tzinfo.github.io/datasourcenotfound
+  gem 'tzinfo-data'
 end
 
