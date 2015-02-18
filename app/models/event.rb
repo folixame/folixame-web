@@ -16,7 +16,7 @@ class Event
   def save
     client = Savon.client(wsdl: 'http://156.35.95.51:8080/wsfolixameevents/events?wsdl')
     p client
-    p 'Saving: ' + @email + ' ' + @password
+    p 'Saving: ' + @name + ' '
     response = client.call(:create_event, message: {name: @name})
     p response.body
   end

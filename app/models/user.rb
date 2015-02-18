@@ -17,7 +17,7 @@ class User
     client = Savon.client(wsdl: 'http://156.35.98.14:8088/folixame/Users.asmx?WSDL')
     p client
     p 'Saving: ' + @email + ' ' + @password
-    response = client.call(:save, message: {email: 'test2', password: 'test2'})
+    response = client.call(:sign_up, message: {email: @email, password: @password})
     p response.body
   end
 
